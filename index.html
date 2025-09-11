@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Simples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background: #f4f4f9;
+    }
+    #container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+      max-width: 500px;
+      margin: auto;
+    }
+    button {
+      margin: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background: #007BFF;
+      color: white;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #resposta {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>POKÉQUIZZ</h1>
+    <div id="conteudo">
+      <button onclick="perguntar()">PERGUNTAR</button>
+    </div>
+  </div>
+
+  <script>
+    // Banco de perguntas e respostas
+    const perguntas = [
+    
+    // Tipagens de Pokémon
+      //01
+      { pergunta: "Quais as tipagens de Groudon Primitivo?", resposta: "Fogo/Terrestre" },
+      //02
+      { pergunta: "Qual a tipagem de Trubbish?", resposta: "Venenoso" },
+      //03
+      { pergunta: "Quais as tipagens de Mega Lopunny?", resposta: "Normal/Lutador" },
+
+    // Nomes de Evoluções
+      //04
+      { pergunta: "Qual o nome da evolução de Chansey?", resposta: "Blissey" },
+      //05
+      { pergunta: "Qual o nome da evolução de Beldum?", resposta: "Metang" },
+      //06
+      { pergunta: "Qual o nome do primeiro estágio do Sharpedo?", resposta: "Carvanha" },
+
+    // Tipagens de Ataques no Pokémon Go
+      //07
+      { pergunta: "Qual a tipagem do Ataque Carregado 'Desbravar'?", resposta: "Grama" },
+      //08
+      { pergunta: "Qual a tipagem do Ataque Carregado 'Laceração Espacial?'", resposta: "Dragão" },
+      //09
+      { pergunta: "Qual a tipagem do Ataque Rápido 'Investida?'", resposta: "Normal" },
+
+    // Perguntas Sobre Pokémon Go
+      //10
+      { pergunta: "Quantos doces de Pokémon são neecessários para formar um Doce GG?", resposta: "100" },
+      //11
+      { pergunta: "Quantos 'Componentes Misteriosos' são necessários para formar um 'Radar Rocket'? 4,5,6 ou 7?", resposta: "6" },
+      //12
+      { pergunta: "Quantas Partículas Max um 'Pacote de Partículas Max' contém? 500, 600, 700 ou 800?", resposta: "800" },
+
+    // Fraquezas
+      //13
+      { pergunta: "Quais as 4 fraquezas do tipo Pedra?", resposta: "Água/Grama/Lutador/Terrestre" },
+      //14
+      { pergunta: "Quais as 3 resistências do tipo Inseto?", resposta: "Grama/Lutador/Terrestre" },
+
+    // Medalha
+      //15
+      { pergunta: "Quantos Pikachu são necessários para Platinar a medalha Fã de Pikachu? 500, 750, 1000 ou 1500?", resposta: "1000" },
+
+      // Quem é Esse Pokémon
+      //16
+      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      //17
+      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      //18
+      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      //19
+      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      //20
+      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+    ];
+
+    let perguntasDisponiveis = [...perguntas];
+
+    function perguntar() {
+      if (perguntasDisponiveis.length === 0) {
+        document.getElementById("conteudo").innerHTML = "<p>Acabaram as perguntas de hoje!</p><button onclick='voltar()'>VOLTAR</button>";
+        return;
+      }
+
+      // Sorteia uma pergunta aleatória sem repetir
+      const index = Math.floor(Math.random() * perguntasDisponiveis.length);
+      const perguntaSelecionada = perguntasDisponiveis[index];
+
+      // Remove a pergunta do array para não repetir
+      perguntasDisponiveis.splice(index, 1);
+
+      document.getElementById("conteudo").innerHTML = `
+        <p><b>${perguntaSelecionada.pergunta}</b></p>
+        <button onclick="mostrarResposta('${perguntaSelecionada.resposta}')">MOSTRAR RESPOSTA</button>
+      `;
+    }
+
+    function mostrarResposta(resposta) {
+      document.getElementById("conteudo").innerHTML += `
+        <p id="resposta">${resposta}</p>
+        <button onclick="voltar()">VOLTAR</button>
+      `;
+    }
+
+    function voltar() {
+      document.getElementById("conteudo").innerHTML = `
+        <button onclick="perguntar()">PERGUNTAR</button>
+      `;
+    }
+  </script>
+</body>
+</html>
