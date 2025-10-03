@@ -81,71 +81,121 @@
 
   <script>
     const perguntas = [
-    
+
     // Tipagens de Pokémon
       //01
-      { pergunta: "Quais as tipagens de Groudon Primitivo?", resposta: "Fogo/Terrestre" },
+      { pergunta: "Quais as tipagens de Mega Sharpedo?", resposta: "Água/Sombrio" },
       //02
-      { pergunta: "Qual a tipagem de Trubbish?", resposta: "Venenoso" },
+      { pergunta: "Quais as tipagens de Mega Swampert", resposta: "Água/Terrestre" },
       //03
-      { pergunta: "Quais as tipagens de Mega Lopunny?", resposta: "Normal/Lutador" },
-
-    // Nomes de Evoluções
+      { pergunta: "Quais as tipagens de Mega Blaziken?", resposta: "Fogo/Lutador" },
       //04
-      { pergunta: "Qual o nome da evolução de Chansey?", resposta: "Blissey" },
+      { pergunta: "Quais as tipagens de Mega Sceptile?", resposta: "Grama/Dragão" },
       //05
-      { pergunta: "Qual o nome da evolução de Beldum?", resposta: "Metang" },
+      { pergunta: "Quais as tipagens de Mega Salamence?", resposta: "Dragão/Voador" },
+
+      
+    // Nomes de Evoluções
       //06
-      { pergunta: "Qual o nome do primeiro estágio do Sharpedo?", resposta: "Carvanha" },
-
-    // Tipagens de Ataques no Pokémon Go
+      { pergunta: "Qual o nome da evolução de Woobat?", resposta: "Swoobat" },
       //07
-      { pergunta: "Qual a tipagem do Ataque Carregado 'Desbravar'?", resposta: "Grama" },
+      { pergunta: "Qual o nome da evolução de Ferroseed?", resposta: "Ferrothorn" },
       //08
-      { pergunta: "Qual a tipagem do Ataque Carregado 'Laceração Espacial?'", resposta: "Dragão" },
+      { pergunta: "Qual o nome da evolução de Gastly?", resposta: "Haunter" },
       //09
-      { pergunta: "Qual a tipagem do Ataque Rápido 'Investida?'", resposta: "Normal" },
-
-    // Perguntas Sobre Pokémon Go
+      { pergunta: "Qual o nome do primeiro estágio de Banette?", resposta: "Shuppet" },
       //10
-      { pergunta: "Quantos doces de Pokémon são neecessários para formar um Doce GG?", resposta: "100" },
+      { pergunta: "Qual o nome do primeiro estágio de Sceptile?", resposta: "Treecko" },
+
+      
+    // Tipagens de Ataques no Pokémon Go
       //11
-      { pergunta: "Quantos 'Componentes Misteriosos' são necessários para formar um 'Radar Rocket'? 4,5,6 ou 7?", resposta: "6" },
+      { pergunta: "Qual a tipagem do Ataque Carregado 'Ultraje'?", resposta: "Dragão" },
       //12
-      { pergunta: "Quantas Partículas Max um 'Pacote de Partículas Max' contém? 500, 600, 700 ou 800?", resposta: "800" },
-
-    // Fraquezas
+      { pergunta: "Qual a tipagem do Ataque Carregado 'Sombra Noturna?'", resposta: "Fantasma" },
       //13
-      { pergunta: "Quais as 4 fraquezas do tipo Pedra?", resposta: "Água/Grama/Lutador/Terrestre" },
+      { pergunta: "Qual a tipagem do Ataque Rápido 'Cabeçada Zen?'", resposta: "Psíquico" },
       //14
-      { pergunta: "Quais as 3 resistências do tipo Inseto?", resposta: "Grama/Lutador/Terrestre" },
-
-    // Medalha
+      { pergunta: "Qual a tipagem do Ataque Rápido 'Soco Enganador?'", resposta: "Sombrio" },
+      
+    // Perguntas Sobre Pokémon Go
       //15
-      { pergunta: "Quantos Pikachu são necessários para Platinar a medalha Fã de Pikachu? 500, 750, 1000 ou 1500?", resposta: "1000" },
-
-      // Quem é Esse Pokémon
+      { pergunta: "Quantos doces são necessários para evoluir Sinistea Falsificado? 50, 75, 300, 400?", resposta: "50" },
       //16
-      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      { pergunta: "Diga 2 Pokémon que têm sua quantidade de doces para evoluir reduzida para 0 com uma troca.", resposta: "Haunter/Boldore/Gurdurr/Karrablast/Shelmet/Phantump/Pumpkaboo" },
       //17
-      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      { pergunta: "Em qual dia da semana acontece a Hora Lendária? Segunda, Terça, Quarta ou Sexta?", resposta: "Quarta" },
       //18
-      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      { pergunta: "Quantas Poeiras Estelares você consegue normalmente por capturar um Audino? 750, 1000, 2100, 2500", resposta: "2100" },
+
+      
+      // Fraquezas
       //19
-      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      { pergunta: "Qual tipo é supereficaz contra o tipo tipo Normal?", resposta: "Lutador" },
       //20
+      { pergunta: "Quais as 3 tipos supereficazes contra o tipo Metal?", resposta: "Fogo/Lutador/Terrestre" },
+      //21
+      { pergunta: "Diga 3 tipos não eficazes contra o tipo Metal?", resposta: "Normal/Planta/Gelo/Voador/Psíquico/Inseto/Pedra/Dragão/Metal/Fada" },
+      //22
+      { pergunta: "Diga os 2 tipos não eficazes contra o tipo Psíquico?", resposta: "Lutador/Psíquico" },
+      //23
+      { pergunta: "Qual a tipagem duplamente eficaz contra Charizard? Terrestre, Pedra, Água ou Elétrico?", resposta: "Pedra" },
+
+      
+    // Medalha
+      //24
+      { pergunta: "Quantos Pokémon são necessários capturar de um tipo para platinar a medalha daquele tipo de Pokémon? 2000,2500,3000,4000?", resposta: "2500" },
+
+      
+      // Quem é Esse Pokémon
+      //25
+      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      //26
+      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      //27
+      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      //28
+      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      //29
+      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      //30
+      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      //31
+      { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
+      //32
       { pergunta: "Responda ao Quem é Esse Pokémon", resposta: "-" },
 
+      
       // Pokémon ou Remédio?
-      //21
-      { pergunta: "Nome de Pokémon, ou nome de remédio? Arctozolt", resposta: "Pokémon" },
-      //22
-      { pergunta: "Nome de Pokémon, ou nome de remédio? Januvia", resposta: "Remédio" },
-      //23
-      { pergunta: "Nome de Pokémon, ou nome de remédio? Crestor", resposta: "Remédio" },
-      //24
-      { pergunta: "Nome de Pokémon, ou nome de remédio? Palafin", resposta: "Pokémon" },
+      //33
+      { pergunta: "Nome de Pokémon, ou nome de remédio? Lunesta", resposta: "Remédio" },
+      //34
+      { pergunta: "Nome de Pokémon, ou nome de remédio? Nupentin", resposta: "Remédio" },
+      //35
+      { pergunta: "Nome de Pokémon, ou nome de remédio? Geodon", resposta: "Remédio" },
+      //36
+      { pergunta: "Nome de Pokémon, ou nome de remédio? Carnitor", resposta: "Remédio" },
+      //37
+      { pergunta: "Nome de Pokémon, ou nome de remédio? Vigoroth", resposta: "Pokémon" },
+      //38
+      { pergunta: "Nome de Pokémon, ou nome de remédio? Metang", resposta: "Pokémon" },
+      //39
+      { pergunta: "Nome de Pokémon, ou nome de remédio? Lumineon", resposta: "Pokémon" },
+      //40
+      { pergunta: "Nome de Pokémon, ou nome de remédio? Dipplin", resposta: "Pokémon" },
 
+      
+      // Tem Megaevolução?
+      //41
+      { pergunta: "Absol tem Megaevolução?", resposta: "Sim" },
+      //42
+      { pergunta: "Gengar tem Megaevolução?", resposta: "Sim" },
+      //43
+      { pergunta: "Excadrill tem Megaevolução?", resposta: "Sim" },
+      //44
+      { pergunta: "Machamp tem Megaevolução?", resposta: "Não" },
+      //45
+      { pergunta: "Lilligant tem Megaevolução?", resposta: "Não" },
 ];
 
       
@@ -181,6 +231,7 @@
   </script>
 </body>
 </html>
+
 
 
 
